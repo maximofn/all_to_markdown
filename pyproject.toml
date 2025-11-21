@@ -8,4 +8,5 @@ dependencies = [
     "langchain>=1.0.8",
     "langchain-openai>=1.0.3",
     "ollama>=0.6.1",
+    "markitdown[all]>=0.1.3",
 ]
