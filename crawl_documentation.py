@@ -37,7 +37,7 @@ MODEL_NAME = "gpt-5.1"  # Model to use for link extraction
 REASONING_EFFORT = "high"  # Reasoning effort level: "low", "medium", or "high"
 
 # Crawler configuration
-MAX_PAGES = 200  # Maximum number of pages to crawl (safety limit)
+MAX_PAGES = 500  # Maximum number of pages to crawl (safety limit)
 DELAY_BETWEEN_PAGES = 2  # Seconds to wait between page requests
 
 # ============================================================================
@@ -76,10 +76,10 @@ def extract_next_link(html: str, current_url: str, llm: ChatOpenAI) -> Optional[
         Optional[str]: The next page URL, or None if no next link is found.
     """
     # Truncate HTML if too long (keep first and last parts where nav links usually are)
-    max_chars = 30000
+    max_chars = 50000
     if len(html) > max_chars:
-        html_start = html[:15000]
-        html_end = html[-15000:]
+        html_start = html[:25000]
+        html_end = html[-25000:]
         truncated_html = html_start + "\n\n[... middle content truncated ...]\n\n" + html_end
     else:
         truncated_html = html
