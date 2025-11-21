@@ -17,3 +17,6 @@ documentation_urls.txt
 
 # markitdown folder
 markitdown/
+
+# Markdown output
+markdown_output/
