@@ -1,0 +1,11 @@
+[project]
+name = "all-to-markdown"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "langchain>=1.0.8",
+    "langchain-openai>=1.0.3",
+    "ollama>=0.6.1",
+]
